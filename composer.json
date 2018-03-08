@@ -1,0 +1,14 @@
+{
+    "name": "ikkez/f3-assets-sass",
+    "description": "SASS addon for the Assets plugin for PHP Fat-Free Framework",
+    "keywords": ["F3","fatfree","css","sass","scss"],
+    "homepage": "https://github.com/ikkez/f3-assets-sass",
+    "license": "GPL-3.0",
+    "require": {
+        "ikkez/f3-assets": "^1.1",
+        "leafo/scssphp": "^0.7"
+    },
+    "autoload": {
+        "classmap": ["lib/"]
+    }
+}
