@@ -4,7 +4,7 @@ This is an extention to add a SASS/SCSS compiler to the existing [Assets Managem
 ## Install
 
 When you have F3-Assets already up and running, just run `composer require ikkez/f3-assets-sass`. 
-In case you do not use composer, copy the `assets/` folder into your `AUTOLOAD` path and you should be ready to go.
+In case you do not use composer, copy the `assets/` folder into your `AUTOLOAD` path, install [leafo/scssphp](https://github.com/leafo/scssphp) separately and you should be ready to go.
 
 
 ## Usage
