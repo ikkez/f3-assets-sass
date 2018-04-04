@@ -54,10 +54,13 @@ class Sass extends \Assets {
 								return filemtime(realpath($path)) > $cmtime;
 							},$watch))
 						)) {
+						$bak=setlocale(LC_NUMERIC, 0);
+						setlocale(LC_NUMERIC, 'C');
 						$scss = new Compiler();
 						$scss->addImportPath($path_parts['dirname']);
 						$css = $scss->compile($f3->read($path));
 						$css = $assets->fixRelativePaths($css,$path_parts['dirname'].'/',$public_path);
+						setlocale(LC_NUMERIC, $bak);
 						$f3->write($public_path.$filename,$css);
 					}
 					$asset['path'] = $public_path.$filename;
