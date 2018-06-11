@@ -10,8 +10,8 @@
  *	Copyright (c) 2017-2018 ~ ikkez
  *	Christian Knuth <ikkez0n3@gmail.com>
  *
- *	@version: 1.0.1
- *	@date: 24.08.2017
+ *	@version: 1.0.3
+ *	@date: 11.06.2018
  *
  **/
 namespace Assets;
@@ -44,9 +44,11 @@ class Sass extends \Assets {
 					$path_parts = pathinfo($path);
 					$filename = $path_parts['filename'].'.css';
 					$watch=[];
-					if (isset($asset['watch']))
+					if (isset($asset['watch'])) {
 						foreach ($f3->split($asset['watch']) as $scanPath)
 							$watch+=glob($path_parts['dirname'].'/'.$scanPath);
+						unset($asset['watch']);
+					}
 					$watch[]=$path_parts['dirname'].'/'.$path_parts['basename'];
 					if (!is_file($public_path.$filename) || (
 							($cmtime=filemtime($public_path.$filename)) &&
