@@ -43,6 +43,14 @@ one or multiple paths to scan for file changes - wildcards are possible:
 NB: The `watch`-attribute should only be considered while working on the files, because scanning for file modification times isn't necessary for production-ready styles and would, depending on the amount of files to scan, slow things down. 
 If you need to refresh files on a production environment, it's recommended to clear the temp files with `\Assets::instance()->clear();`, instead of proactive looking for changes.
 
+If you like to add sass files programmatically, you should simply treat them like normal css files:
+
+````php
+$opt = [
+  'watch'=>'ext/*.scss'
+];
+\Assets::instance()->add('scss/main_styles.scss', 'css', 'head', 5, NULL, $opt);
+````
 
 License
 -
