@@ -6,7 +6,7 @@
     "license": "GPL-3.0",
     "require": {
         "ikkez/f3-assets": "^1.1",
-        "leafo/scssphp": "^0.7"
+        "scssphp/scssphp": "^1.0"
     },
     "autoload": {
         "classmap": ["lib/"]
