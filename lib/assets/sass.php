@@ -7,11 +7,11 @@
  *	compliance with the license. Any of the license terms and conditions
  *	can be waived if you get permission from the copyright holder.
  *
- *	Copyright (c) 2017-2018 ~ ikkez
+ *	Copyright (c) 2017-2019 ~ ikkez
  *	Christian Knuth <ikkez0n3@gmail.com>
  *
- *	@version: 1.0.3
- *	@date: 11.06.2018
+ *	@version: 1.0.4
+ *	@date: 20.06.2019
  *
  **/
 namespace Assets;
@@ -59,7 +59,7 @@ class Sass extends \Assets {
 						$bak=setlocale(LC_NUMERIC, 0);
 						setlocale(LC_NUMERIC, 'C');
 						$scss = new Compiler();
-						$scss->addImportPath($path_parts['dirname']);
+						$scss->setImportPaths([$path_parts['dirname']]);
 						$css = $scss->compile($f3->read($path));
 						$css = $assets->fixRelativePaths($css,$path_parts['dirname'].'/',$public_path);
 						setlocale(LC_NUMERIC, $bak);
