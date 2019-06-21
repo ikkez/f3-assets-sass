@@ -10,13 +10,13 @@
  *	Copyright (c) 2017-2019 ~ ikkez
  *	Christian Knuth <ikkez0n3@gmail.com>
  *
- *	@version: 1.0.4
- *	@date: 20.06.2019
+ *	@version: 1.0.5
+ *	@date: 21.06.2019
  *
  **/
 namespace Assets;
 
-use \Leafo\ScssPhp\Compiler;
+use ScssPhp\ScssPhp\Compiler;
 
 class Sass extends \Assets {
 
